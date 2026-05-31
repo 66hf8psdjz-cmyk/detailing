@@ -30,7 +30,6 @@
             --pink-light: #ff6b9d;
         }
 
-        /* анимация появления */
         .fade-up {
             opacity: 0;
             transform: translateY(40px);
@@ -58,7 +57,6 @@
             padding: 0 24px;
         }
 
-        /* шапка */
         header {
             background: rgba(10, 10, 10, 0.9);
             backdrop-filter: blur(12px);
@@ -109,7 +107,6 @@
             color: var(--pink);
         }
 
-        /* hero */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -213,7 +210,6 @@
             border-radius: 4px;
         }
 
-        /* галерея автомобилей */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -276,7 +272,6 @@
             color: var(--pink-light);
         }
 
-        /* контакты */
         .contacts {
             background: linear-gradient(145deg, #0b0b0b, #020202);
             border-radius: 48px;
@@ -467,7 +462,7 @@
                 </div>
                 <!-- Porsche 911 -->
                 <div class="car-card fade-up">
-                    <img class="car-img" src="images/porsche_911.jpg" alt="Porsche 911" loading="lazy">
+                    <img class="car-img" src="images/porsche.jpg" alt="Porsche 911" loading="lazy">
                     <div class="car-info">
                         <h3>Porsche 911</h3>
                         <div class="price">Полировка <span>+ керамика кузова</span></div>
@@ -538,7 +533,6 @@
 </footer>
 
 <script>
-    // анимация при скролле
     const fadeElements = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -550,7 +544,6 @@
     }, { threshold: 0.2 });
     fadeElements.forEach(el => observer.observe(el));
 
-    // бургер-меню
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     menuBtn.addEventListener('click', () => {
@@ -562,7 +555,6 @@
         });
     });
 
-    // отправка формы (имитация)
     const form = document.getElementById('leadForm');
     if (form) {
         form.addEventListener('submit', function(e) {
@@ -572,7 +564,6 @@
         });
     }
 
-    // плавный скролл к якорям
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
